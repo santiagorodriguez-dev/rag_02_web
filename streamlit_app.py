@@ -9,11 +9,11 @@ st.write(
     "Chatbot con información de Rags de Historia, Presente, Futuro de la IA (gpt-4o-mini de openai)"
 )
 
-if st.secrets['security']['SECRET']:
+if st.secrets['security']['SECRET'] != "":
     secret = st.secrets['security']['SECRET']
 else:
-    secret = None
-    
+    secret = ""
+
 thread_id = str(uuid.uuid4())
 user = "user_" + str(uuid.uuid4())
 
