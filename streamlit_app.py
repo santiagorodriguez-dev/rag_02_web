@@ -14,13 +14,13 @@ if st.secrets['security']['SECRET'] != "":
 else:
     secret = ""
 
-thread_id = str(uuid.uuid4())
-user = "user_" + str(uuid.uuid4())
+secret = st.text_input("Introduce Secret para poder continuar", type="password")
 
 if not secret:
-    st.info("Introduce el secret para poder continuar", icon="🗝️")
-    secret = st.text_input("Secret", type="password")
+    pass
 else:
+    thread_id = str(uuid.uuid4())
+    user = "user_" + str(uuid.uuid4())
     prompt = st.chat_input("What is up?")
 
     if "messages" not in st.session_state:
@@ -43,6 +43,16 @@ else:
             "user_id":user
         }
         resultado = sp.post_request(api_url, data)
+
+        if resultado.get('status_code') == 401:
+            with st.chat_message("assistant"):
+                st.markdown("Secret es incorrecto, indique uno valido válido")
+            st.stop()
+
+        if resultado.get('status_code') == 500:
+            with st.chat_message("assistant"):
+                st.markdown("Error al procesar la solicitud, intente de nuevo")
+            st.stop()
 
         if resultado.get('mesajes_trazas'):
             with st.chat_message("ia", avatar="💻"):
