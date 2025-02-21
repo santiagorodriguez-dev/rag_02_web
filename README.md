@@ -1,19 +1,50 @@
-# 💬 Chatbot template
+---
+title: Chatbot RAG'S
+description: Chatbot con información de RAGs sobre la Historia, Presente y Futuro de la IA (gpt-4o-mini de OpenAI)
+---
+# Chatbot RAG'S Web
+Chatbot con información de RAGs sobre la Historia, Presente y Futuro de la IA (gpt-4o-mini de OpenAI)
 
-A simple Streamlit app that shows how to build a chatbot using OpenAI's GPT-3.5.
+## Características
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chatbot-template.streamlit.app/)
+- Streamlit
+- Python 3
 
-### How to run it on your own machine
+## Web
 
-1. Install the requirements
+- Ejecucion de consulta
+     
+![images](https://github.com/santiagorodriguez-dev/rag_02_web/blob/main/images/01.PNG)
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+![images](https://github.com/santiagorodriguez-dev/rag_02_web/blob/main/images/02.PNG)
 
-2. Run the app
+![images](https://github.com/santiagorodriguez-dev/rag_02_web/blob/main/images/03.PNG)
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+## Cómo usar
+
+- Hay un fichero secrets.toml.example en el carpeta .streamlit del proyecto, renombrar sin el .example y cambiar por los datos correctos.
+```bash
+[security]
+SECRET=''
+API_URL='https://xxxxxxxxxxxxxxxxx/call_modelo'
+```
+- Crear un entorno virtual 
+```bash
+python -m venv venv
+```
+- Activar el entorno virtual en Windows
+```bash
+venv\Scripts\activate
+```
+- Activar el entorno virtual en macOS/Linux
+```bash
+source venv/bin/activate
+```
+- Clonar el repositorio localmente e instalar paquetes con pip 
+```bash
+pip install -r requirements.txt
+```
+- Ejecutar localmente usando 
+```bash
+streamlit run streamlit_app.py
+```
