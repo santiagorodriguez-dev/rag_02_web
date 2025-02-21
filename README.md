@@ -12,11 +12,15 @@ Chatbot con información de RAGs sobre la Historia, Presente y Futuro de la IA (
 
 ## Web
 
-- Ejecucion de consulta
+- Ejecucion de consulta parte 1
      
 ![images](https://github.com/santiagorodriguez-dev/rag_02_web/blob/main/images/01.PNG)
 
+- Ejecucion de consulta parte 2
+
 ![images](https://github.com/santiagorodriguez-dev/rag_02_web/blob/main/images/02.PNG)
+
+- Ejecucion de consulta parte 3
 
 ![images](https://github.com/santiagorodriguez-dev/rag_02_web/blob/main/images/03.PNG)
 
@@ -48,3 +52,7 @@ pip install -r requirements.txt
 ```bash
 streamlit run streamlit_app.py
 ```
+
+## Autores
+
+* **Santiago Rodriguez** - [santiagorodriguez-dev](https://github.com/santiagorodriguez-dev)
